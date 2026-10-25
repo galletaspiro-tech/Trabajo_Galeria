@@ -20,7 +20,7 @@ En esta sección irán las listas de actividades enumeradas:
 - [x] Menu Principal
 - [x] Formularios
 - [ ] Descipción
-- [ ] Enlaces
+- [ ] Enlacesgit
 - [ ] otras ventanas 
 
 ###  Bloque de código ejemplo
