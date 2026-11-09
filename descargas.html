@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Descargas - Galería Secreta</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a class="navbar__logo" href="index.html"><span>Galería</span>Secreta</a>
+    <ul class="nav__links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="servicio.html">Servicios</a></li>
+      <li><a href="lo">Iniciar Seción</a></li>
+      <li><a href="perfil.html">Registrar</a></li>
+    </ul>
+  </nav>
+
+  <!-- HEADER -->
+  <div class="page-header">
+    <h2> Centro de Descargas</h2>
+    <p>Gestiona tus imágenes en alta resolución</p>
+  </div>
+
+  <!-- SECCIÓN DE DESCARGAS CON TABLA -->
+  <section class="descargas-section">
+    <div class="descargas-container">
+
+      <!-- Filtros -->
+      <div class="descargas-filtros">
+        <h3>Filtrar por formato</h3>
+        <div class="filtros-group">
+          <button class="filtro-btn active">Todos</button>
+          <button class="filtro-btn">JPG</button>
+          <button class="filtro-btn">PNG</button>
+          <button class="filtro-btn">RAW</button>
+        </div>
+      </div>
+
+      <!-- TABLA DE DESCARGAS -->
+      <div class="tabla-wrapper">
+        <table class="tabla-descargas">
+          <thead>
+            <tr>
+              <th>Imagen</th>
+              <th>Nombre</th>
+              <th>Formato</th>
+              <th>Tamaño</th>
+              <th>Licencia</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Fila 1 -->
+            <tr>
+              <td><img src="https://picsum.photos/id/10/100/100" alt="Bosque" class="tabla-img"></td>
+              <td><strong>Bosque Místico</strong></td>
+              <td><span class="formato-badge jpg">JPG</span></td>
+              <td>12.5 MB</td>
+              <td>Uso Comercial</td>
+              <td class="acciones">
+                <a href="#" class="btn-accion btn-descargar" title="Descargar">⬇</a>
+                <a href="#" class="btn-accion btn-actualizar" title="Actualizar">✏️</a>
+                <a href="#" class="btn-accion btn-eliminar" title="Eliminar">🗑️</a>
+              </td>
+            </tr>
+
+            <!-- Fila 2 -->
+            <tr>
+              <td><img src="https://picsum.photos/id/11/100/100" alt="Playa" class="tabla-img"></td>
+              <td><strong>Playa Paradisíaca</strong></td>
+              <td><span class="formato-badge png">PNG</span></td>
+              <td>18.3 MB</td>
+              <td>Creative Commons</td>
+              <td class="acciones">
+                <a href="#" class="btn-accion btn-descargar" title="Descargar">⬇</a>
+                <a href="#" class="btn-accion btn-actualizar" title="Actualizar">✏️</a>
+                <a href="#" class="btn-accion btn-eliminar" title="Eliminar">🗑️</a>
+              </td>
+            </tr>
+
+            <!-- Fila 3 -->
+            <tr>
+              <td><img src="https://picsum.photos/id/12/100/100" alt="Montaña" class="tabla-img"></td>
+              <td><strong>Cumbre Nevada</strong></td>
+              <td><span class="formato-badge raw">RAW</span></td>
+              <td>45.7 MB</td>
+              <td>Uso Comercial</td>
+              <td class="acciones">
+                <a href="#" class="btn-accion btn-descargar" title="Descargar">⬇</a>
+                <a href="#" class="btn-accion btn-actualizar" title="Actualizar">✏️</a>
+                <a href="#" class="btn-accion btn-eliminar" title="Eliminar">🗑️</a>
+              </td>
+            </tr>
+
+            <!-- Fila 4 -->
+            <tr>
+              <td><img src="https://picsum.photos/id/13/100/100" alt="Lago" class="tabla-img"></td>
+              <td><strong>Lago Sereno</strong></td>
+              <td><span class="formato-badge jpg">JPG</span></td>
+              <td>9.8 MB</td>
+              <td>Uso Comercial</td>
+              <td class="acciones">
+                <a href="#" class="btn-accion btn-descargar" title="Descargar">⬇</a>
+                <a href="#" class="btn-accion btn-actualizar" title="Actualizar">✏️</a>
+                <a href="#" class="btn-accion btn-eliminar" title="Eliminar">🗑️</a>
+              </td>
+            </tr>
+
+            <!-- Fila 5 -->
+            <tr>
+              <td><img src="https://picsum.photos/id/14/100/100" alt="Cascada" class="tabla-img"></td>
+              <td><strong>Cascada Escondida</strong></td>
+              <td><span class="formato-badge png">PNG</span></td>
+              <td>22.1 MB</td>
+              <td>Creative Commons</td>
+              <td class="acciones">
+                <a href="#" class="btn-accion btn-descargar" title="Descargar">⬇</a>
+                <a href="#" class="btn-accion btn-actualizar" title="Actualizar">✏️</a>
+                <a href="#" class="btn-accion btn-eliminar" title="Eliminar">🗑️</a>
+              </td>
+            </tr>
+
+            <!-- Fila 6 -->
+            <tr>
+              <td><img src="https://picsum.photos/id/15/100/100" alt="Valle" class="tabla-img"></td>
+              <td><strong>Valle Verde</strong></td>
+              <td><span class="formato-badge raw">RAW</span></td>
+              <td>52.3 MB</td>
+              <td>Uso Comercial</td>
+              <td class="acciones">
+                <a href="#" class="btn-accion btn-descargar" title="Descargar">⬇</a>
+                <a href="#" class="btn-accion btn-actualizar" title="Actualizar">✏️</a>
+                <a href="#" class="btn-accion btn-eliminar" title="Eliminar">🗑️</a>
+              </td>
+            </tr>
+
+            <!-- Fila 7 -->
+            <tr>
+              <td><img src="https://picsum.photos/id/16/100/100" alt="Desierto" class="tabla-img"></td>
+              <td><strong>Dunas Doradas</strong></td>
+              <td><span class="formato-badge jpg">JPG</span></td>
+              <td>15.2 MB</td>
+              <td>Uso Comercial</td>
+              <td class="acciones">
+                <a href="#" class="btn-accion btn-descargar" title="Descargar">⬇</a>
+                <a href="#" class="btn-accion btn-actualizar" title="Actualizar">✏️</a>
+                <a href="#" class="btn-accion btn-eliminar" title="Eliminar">🗑️</a>
+              </td>
+            </tr>
+
+            <!-- Fila 8 -->
+            <tr>
+              <td><img src="https://picsum.photos/id/17/100/100" alt="Ciudad" class="tabla-img"></td>
+              <td><strong>Skyline Nocturno</strong></td>
+              <td><span class="formato-badge png">PNG</span></td>
+              <td>28.7 MB</td>
+              <td>Creative Commons</td>
+              <td class="acciones">
+                <a href="#" class="btn-accion btn-descargar" title="Descargar">⬇</a>
+                <a href="#" class="btn-accion btn-actualizar" title="Actualizar">✏️</a>
+                <a href="#" class="btn-accion btn-eliminar" title="Eliminar">🗑️</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Resumen -->
+      <div class="descargas-resumen">
+        <p> Total: <strong>8 imágenes</strong> ·  Espacio usado: <strong>204.6 MB</strong></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BOTÓN VOLVER -->
+  <a href="servicio.html" class="btn-back">← Volver a Servicios</a>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-logo">Galería<span>Secreta</span></div>
+      <p>Compartiendo los mejores momentos del mundo, una foto a la vez.</p>
+      
+      <div class="social-links">
+        <a href="#" target="_blank"> Facebook</a>
+        <a href="#" target="_blank"> Instagram</a>
+        <a href="#" target="_blank"> Twitter</a>
+        <a href="#" target="_blank"> Email</a>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2024 Galería Secreta. Todos los derechos reservados.</p>
+      <p>Desarrollado por <strong></strong></p>
+    </div>
+  </footer>
+
+</body>
+</html>

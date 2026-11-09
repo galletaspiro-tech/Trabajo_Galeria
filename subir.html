@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subir Fotos - Galería Secreta</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+  <style>
+    body { 
+      background: #f8fafc; 
+      font-family: "Segoe UI", sans-serif; 
+      margin: 0; 
+    }
+    .page-container { 
+      max-width: 700px; 
+      margin: 60px auto; 
+      padding: 20px; 
+    }
+    
+    .upload-card { 
+      background: #fff; 
+      padding: 40px; 
+      border-radius: 20px; 
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+      text-align: center; 
+    }
+    .upload-card h2 { 
+      color: #0f172a; 
+      margin-bottom: 10px; 
+      font-size: 2rem; 
+    }
+    .upload-card > p { 
+      color: #64748b; 
+      margin-bottom: 30px; 
+    }
+
+    /* Estilos del Formulario */
+    .form-group {
+      margin-bottom: 25px;
+      text-align: left;
+    }
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      color: #0f172a;
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+    .form-group select {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 1rem;
+      color: #334155;
+      background: #fff;
+      cursor: pointer;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .form-group select:focus {
+      outline: none;
+      border-color: #144fa1;
+      box-shadow: 0 0 0 3px rgba(20, 79, 161, 0.1);
+    }
+
+    /* Input de archivo estilizado sin JS */
+    .file-input {
+      width: 100%;
+      padding: 15px;
+      border: 2px dashed #cbd5e1;
+      border-radius: 12px;
+      background: #f8fafc;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 0.95rem;
+      color: #475569;
+    }
+    .file-input:hover {
+      border-color: #144fa1;
+      background: #eff6ff;
+      color: #144fa1;
+    }
+    .file-input::file-selector-button {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 6px;
+      background: #144fa1;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      margin-right: 15px;
+      transition: background 0.3s ease;
+    }
+    .file-input::file-selector-button:hover {
+      background: #0f3d82;
+    }
+
+    .hint {
+      font-size: 0.8rem;
+      color: #94a3b8;
+      margin-top: 8px;
+      text-align: center;
+    }
+
+    /* Botones */
+    .btn-upload {
+      width: 100%;
+      margin-top: 20px;
+      padding: 14px 40px;
+      background: #144fa1;
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-upload:hover {
+      background: #0f3d82;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(20,79,161,0.3);
+    }
+
+    .btn-back {
+      display: block;
+      margin: 30px auto 0;
+      color: #64748b;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.3s;
+      text-align: center;
+    }
+    .btn-back:hover {
+      color: #144fa1;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a class="navbar__logo" href="index.html"><span>Galería</span>Secreta</a>
+    <ul class="nav__links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="servicio.html" class="active">Servicios</a></li>
+     <li><a href="login.html">Iniciar Seción</a></li>
+      <li><a href="perfil.html">Registrar</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-container">
+    <!-- El enctype es OBLIGATORIO para que los archivos se puedan enviar a un servidor -->
+    <form class="upload-card" action="#" method="POST" enctype="multipart/form-data">
+      <h2> Sube tus Fotos</h2>
+      <p>Comparte tu visión con el mundo.</p>
+      
+      <!-- 1. SELECTOR DE CATEGORÍA (Obligatorio) -->
+      <div class="form-group">
+        <label for="categoria">¿En qué categoría quieres guardar esta foto?</label>
+        <select id="categoria" name="categoria" required>
+          <option value="" disabled selected>-- Selecciona una categoría --</option>
+          <option value="mascotas"> Mascotas</option>
+          <option value="familia">Familia</option>
+          <option value="atardecer"> Atardecer</option>
+          <option value="paisaje"> Paisaje</option>
+          <option value="viajes">Viajes</option>
+          <option value="naturaleza"> Naturaleza</option>
+        </select>
+      </div>
+
+      <!-- 2. INPUT DE ARCHIVO (Obligatorio) -->
+      <div class="form-group">
+        <label for="archivo">Selecciona tu imagen</label>
+        <input type="file" id="archivo" name="archivo" class="file-input" accept="image/png, image/jpeg, image/webp" required>
+        <p class="hint">Formatos permitidos: JPG, PNG, WEBP • Tamaño máximo: 50MB</p>
+      </div>
+
+      <!-- 3. BOTÓN DE ENVÍO -->
+      <button type="submit" class="btn-upload">Subir Fotografía</button>
+      
+      <a href="servicio.html" class="btn-back">← Volver a Servicios</a>
+    </form>
+  </div>
+  <!-- SECCIÓN DE CONTACTO -->
+  <section id="contacto" class="contacto-section">
+    <div class="contenido-inner">
+      <h2>Contáctanos</h2>
+      <p style="color: #cbd5e1; margin-bottom: 30px;">¿Tienes dudas o sugerencias? Escríbenos.</p>
+      
+      <form class="contact-form" action="" method="post">
+        <div class="form-group">
+          <input type="text" placeholder="Tu Nombre" required>
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="Tus Apellidos" required>
+        </div>
+        <div class="form-group">
+          <select name="ocupacion" required>
+            <option value="" disabled selected>Selecciona tu ocupación</option>
+            <option value="estudiante">Estudiante</option>
+            <option value="hogar">Del Hogar</option>
+            <option value="inversionista">Inversionista</option>
+            <option value="fotografo">Fotógrafo</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Tu Correo Electrónico" required>
+        </div>
+        <button type="submit" class="btn-submit">Enviar Mensaje</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER (Pie de página) -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-logo">Galería<span>Secreta</span></div>
+      <p>Compartiendo los mejores momentos del mundo, una foto a la vez.</p>
+      
+      <div class="social-links">
+        <a href="#" target="_blank"> Facebook</a>
+        <a href="#" target="_blank"> Instagram</a>
+        <a href="#" target="_blank"> Twitter</a>
+        <a href="#" target="_blank"> Email</a>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2024 Galería Secreta. Todos los derechos reservados.</p>
+      <p>Desarrollado por <strong></strong></p>
+    </div>
+
+
+</body>
+</html>

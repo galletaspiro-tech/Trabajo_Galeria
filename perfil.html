@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear Perfil - Galería Secreta</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a class="navbar__logo" href="index.html"><span>Galería</span>Secreta</a>
+    <ul class="nav__links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="servicio.html">Servicios</a></li>
+      <li><a href="login.html">Iniciar Seción</a></li>
+      <li><a href="perfil.html">Registrar</a></li>
+    </ul>
+  </nav>
+
+  <section class="perfil-section">
+    <div class="perfil-container">
+      <div class="perfil-card">
+        <div class="perfil-header">
+          <h2> Crea tu Perfil</h2>
+          <p>Muestra tu rollo y comparte tus mejores shots con el mundo</p>
+        </div>
+
+        <form class="perfil-form" action="#" method="POST">
+          
+          <!-- Subir Foto de Perfil -->
+          <div class="form-group">
+            <label>Tu Foto de Perfil</label>
+            <div class="upload-profile">
+              <div class="upload-icon"></div>
+              <div class="upload-text">
+                <h4>Sube tu mejor foto</h4>
+                <p>JPG o PNG. Máx 5MB.</p>
+              </div>
+              <input type="file" accept="image/*" style="display: none;">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <!-- Nombre -->
+            <div class="form-group">
+              <label for="nombre">Tu Nombre o Apodo</label>
+              <input type="text" id="nombre" placeholder="Ej. Alex, El_Fotografo, etc." required>
+            </div>
+            <!-- Correo -->
+            <div class="form-group">
+              <label for="email">Tu Correo</label>
+              <input type="email" id="email" placeholder="tu@correo.com" required>
+            </div>
+          </div>
+
+          <!-- Estilo de Fotografía (Versión Chava / Casual) -->
+          <div class="form-group">
+            <label for="estilo">¿Qué tipo de fotos subes?</label>
+            <select id="estilo" required>
+              <option value="" disabled selected>Elige tu estilo...</option>
+              <option value="aesthetic">Fotos Aesthetic / De perfil </option>
+              <option value="street"> Urbano </option>
+              <option value="viajes">Viajes y Aventuras </option>
+              <option value="mascotas">Mascotas y Memes </option>
+              <option value="conciertos">Conciertos y Festivales </option>
+              <option value="comida">Comida y Cafecito </option>
+              <option value="random">Random / Lo que salga </option>
+            </select>
+          </div>
+
+          <!-- Biografía -->
+          <div class="form-group">
+            <label for="bio">Cuéntanos de ti (Bio)</label>
+            <textarea id="bio" placeholder="Ej: Amante del café, los atardeceres y sacar fotos con mi celular. " required></textarea>
+          </div>
+
+          <!-- Redes Sociales -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="instagram">Instagram / TikTok</label>
+              <input type="text" id="instagram" placeholder="@tu_usuario">
+            </div>
+            <div class="form-group">
+              <label for="web">Link de tu portafolio (Opcional)</label>
+              <input type="url" id="web" placeholder="https://...">
+            </div>
+          </div>
+
+          <button type="submit" class="btn-submit"> Crear mi Perfil</button>
+        </form>
+
+        <a href="servicio.html" class="btn-back">← Volver a Servicios</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-logo">Galería<span>Secreta</span></div>
+      <p>Compartiendo los mejores momentos del mundo, una foto a la vez.</p>
+      <div class="social-links">
+        <a href="#" target="_blank"> Facebook</a>
+        <a href="#" target="_blank"> Instagram</a>
+        <a href="#" target="_blank"> Twitter</a>
+        <a href="#" target="_blank"> Email</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Galería Secreta. Todos los derechos reservados.</p>
+      <p>Desarrollado por <strong></strong></p>
+    </div>
+  </footer>
+
+</body>
+</html>

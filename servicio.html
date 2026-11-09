@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios - Galería Secreta</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a class="navbar__logo" href="index.html"><span>Galería</span>Secreta</a>
+    <ul class="nav__links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="servicio.html" class="active">Servicios</a></li>
+
+      <li><a href="login.html">Iniciar Seción</a></li>
+      <li><a href="perfil.html">Registrar</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO CON VIDEO -->
+  <header class="hero">
+    <video class="hero__bg" autoplay loop muted playsinline>
+      <source src="images/F2.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+     
+      <h1>Nuestros Servicios</h1>
+      <p>Soluciones fotográficas profesionales diseñadas para inmortalizar cada instante con precisión y elegancia.</p>
+      <a href="#servicios" class="btn-hero">Explorar Servicios</a>
+    </div>
+  </header>
+
+  <!-- SECCIÓN DE SERVICIOS CON PESTAÑAS -->
+  <section class="servicios-tabs" id="servicios">
+    <div class="tabs-header">
+      <h2>Nuestros Servicios</h2>
+      <p>Selecciona una categoría para ver los detalles</p>
+    </div>
+
+    <div class="tabs-container">
+      <!-- Radio buttons ocultos -->
+      <input type="radio" name="tabs" id="tab1" checked>
+      <input type="radio" name="tabs" id="tab2">
+      <input type="radio" name="tabs" id="tab3">
+      <input type="radio" name="tabs" id="tab4">
+      <input type="radio" name="tabs" id="tab5">
+
+      <!-- Navegación de pestañas tipo píldora -->
+      <div class="tabs-nav">
+        <label for="tab1" class="tab-label">Subir Fotos</label>
+        <label for="tab2" class="tab-label">Galería Pública</label>
+        <label for="tab3" class="tab-label">Descargas</label>
+        <label for="tab4" class="tab-label">Favoritas</label>
+        <label for="tab5" class="tab-label">Perfiles</label>
+      </div>
+
+      <!-- Contenido de las pestañas -->
+      <div class="tabs-content">
+        
+        <!-- ===== PESTAÑA 1: SUBIR FOTOS ===== -->
+        <div class="tab-panel" id="panel1">
+          <div class="panel-header">
+            <h3>Sube tus Fotos</h3>
+            <p>Comparte tus obras maestras con nuestra comunidad global</p>
+          </div>
+          <div class="panel-divider"></div>
+          <div class="panel-action">
+            <a href="subir.html" class="btn-accion">Comenzar a Subir</a>
+          </div>
+        </div>
+
+        <!-- ===== PESTAÑA 2: GALERÍA PÚBLICA ===== -->
+        <div class="tab-panel" id="panel2">
+          <div class="panel-header">
+            <h3>Galería Pública</h3>
+            <p>Expón tu trabajo en un escaparate internacional curado para destacar las tendencias visuales</p>
+          </div>
+          <div class="panel-divider"></div>
+          <div class="panel-action">
+            <a href="galeria.html" class="btn-accion">Ver Galería</a>
+          </div>
+        </div>
+
+        <!-- ===== PESTAÑA 3: DESCARGAS ===== -->
+        <div class="tab-panel" id="panel3">
+          <div class="panel-header">
+            <h3>Descarga en Alta Resolución</h3>
+            <p>Acceso a bancos de imágenes con especificaciones técnicas rigurosas para impresión o uso digital</p>
+          </div>
+          <div class="panel-divider"></div>
+          <div class="panel-action">
+            <a href="descargas.html" class="btn-accion">Ir a Descargas</a>
+          </div>
+        </div>
+
+        <!-- ===== PESTAÑA 4: FAVORITAS ===== -->
+        <div class="tab-panel" id="panel4">
+          <div class="panel-header">
+            <h3>Interacción y Favoritas</h3>
+            <p>Mecanismos de retroalimentación social pensados para conectar directamente a creadores con entusiastas</p>
+          </div>
+          <div class="panel-divider"></div>
+          <div class="panel-action">
+            <a href="favoritos.html" class="btn-accion">Ver Favoritas</a>
+          </div>
+        </div>
+
+        <!-- ===== PESTAÑA 5: PERFILES ===== -->
+        <div class="tab-panel" id="panel5">
+          <div class="panel-header">
+            <h3>Perfiles de Artistas</h3>
+            <p>Construye tu marca personal con un portafolio web dedicado, biografía curada y enlaces directos</p>
+          </div>
+          <div class="panel-divider"></div>
+          <div class="panel-action">
+            <a href="perfil.html" class="btn-accion">Crear Perfil</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-logo">Galería<span>Secreta</span></div>
+      <p>Compartiendo los mejores momentos del mundo, una foto a la vez.</p>
+      <div class="social-links">
+        <a href="#" target="_blank"> Facebook</a>
+        <a href="#" target="_blank"> Instagram</a>
+        <a href="#" target="_blank"> Twitter</a>
+        <a href="#" target="_blank">Email</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Galería Secreta. Todos los derechos reservados.</p>
+      <p>Desarrollado por <strong></strong></p>
+    </div>
+  </footer>
+
+</body>
+</html>

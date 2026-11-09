@@ -1,0 +1,229 @@
+/* ===== INICIO DE SESIÓN (LOGIN) ===== */
+.login-section {
+  min-height: calc(100vh - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+}
+
+.login-container {
+  width: 100%;
+  max-width: 450px;
+}
+
+.login-card {
+  background: #fff;
+  padding: 45px 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.login-header h2 {
+  color: #0f172a;
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.login-header p {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.login-form .form-group {
+  margin-bottom: 20px;
+}
+
+.login-form .form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #0f172a;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.login-form .form-group input[type="email"],
+.login-form .form-group input[type="password"] {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #f8fafc;
+  color: #333;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.login-form .form-group input[type="email"]:focus,
+.login-form .form-group input[type="password"]:focus {
+  outline: none;
+  border-color: #144fa1;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(20, 79, 161, 0.1);
+}
+
+/* Opciones (Recordarme / Olvidé contraseña) */
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: #475569;
+  font-size: 0.9rem;
+}
+
+.remember-me input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #144fa1;
+}
+
+.forgot-password {
+  color: #144fa1;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+  color: #0f3d82;
+  text-decoration: underline;
+}
+
+/* Botón Iniciar Sesión */
+.btn-login {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #144fa1, #266fdc);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 25px;
+}
+
+.btn-login:hover {
+  background: linear-gradient(135deg, #0f3d82, #1e5bb8);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(20, 79, 161, 0.4);
+}
+
+/* Separador "o continúa con" */
+.login-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+.login-divider::before,
+.login-divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.login-divider span {
+  padding: 0 15px;
+}
+
+/* Botones de redes sociales */
+.social-login {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.social-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #334155;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+.social-btn:hover {
+  border-color: #144fa1;
+  background: #f8fafc;
+  transform: translateY(-2px);
+}
+
+.social-btn.google span,
+.social-btn.facebook span {
+  font-size: 1.1rem;
+}
+
+/* Link de registro */
+.login-register {
+  text-align: center;
+  color: #64748b;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.login-register a {
+  color: #144fa1;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.login-register a:hover {
+  color: #0f3d82;
+  text-decoration: underline;
+}
+
+/* Responsive login */
+@media (max-width: 600px) {
+  .login-card {
+    padding: 35px 25px;
+  }
+  
+  .login-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .login-options {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .social-login {
+    flex-direction: column;
+  }
+}

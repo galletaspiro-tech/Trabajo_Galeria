@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería Pública - Galería Secreta</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a class="navbar__logo" href="index.html"><span>Galería</span>Secreta</a>
+    <ul class="nav__links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="servicio.html">Servicios</a></li>
+      <li><a href="login.html">Iniciar Seción</a></li>
+      <li><a href="perfil.html">Registrar</a></li>
+    </ul>
+  </nav>
+
+  <!-- HEADER CENTRADO -->
+  <div class="page-header">
+    <h2> Galería Pública</h2>
+    <p>Descubre las mejores fotografías de nuestra comunidad</p>
+    <p>Explora nuestras mejores fotografías por categoría</p>
+  </div>
+
+  <!-- GALERÍA CON PESTAÑAS -->
+  <section class="galeria-publica">
+    
+    
+
+    <div class="tabs-container">
+      <input type="radio" name="galeria-tabs" id="gtab1" checked>
+      <input type="radio" name="galeria-tabs" id="gtab2">
+      <input type="radio" name="galeria-tabs" id="gtab3">
+      <input type="radio" name="galeria-tabs" id="gtab4">
+      <input type="radio" name="galeria-tabs" id="gtab5">
+
+      <div class="tabs-nav">
+        <label for="gtab1" class="tab-label">Todas</label>
+        <label for="gtab2" class="tab-label">Mascotas</label>
+        <label for="gtab3" class="tab-label">Familia</label>
+        <label for="gtab4" class="tab-label">Atardecer</label>
+        <label for="gtab5" class="tab-label">Paisaje</label>
+      </div>
+
+      <div class="tabs-content">
+        <div class="tab-panel" id="gpanel1">
+          <div class="gallery-grid">
+            <img src="https://picsum.photos/id/237/600/400" alt="Perro">
+            <img src="https://picsum.photos/id/1005/600/400" alt="Familia">
+            <img src="https://picsum.photos/id/1036/600/400" alt="Atardecer">
+            <img src="https://picsum.photos/id/15/600/400" alt="Paisaje">
+            <img src="https://picsum.photos/id/433/600/400" alt="Gato">
+            <img src="https://picsum.photos/id/1012/600/400" alt="Padres">
+            <img src="https://picsum.photos/id/1039/600/400" alt="Puesta de sol">
+            <img src="https://picsum.photos/id/28/600/400" alt="Lago">
+            <img src="https://picsum.photos/id/1025/600/400" alt="Mascota">
+            <img src="https://picsum.photos/id/1020/600/400" alt="Niños">
+            <img src="https://picsum.photos/id/1043/600/400" alt="Cielo">
+            <img src="https://picsum.photos/id/29/600/400" alt="Cascada">
+          </div>
+        </div>
+
+        <div class="tab-panel" id="gpanel2">
+          <div class="gallery-grid">
+            <img src="https://picsum.photos/id/237/600/400" alt="Perro negro">
+            <img src="https://picsum.photos/id/433/600/400" alt="Gato">
+            <img src="https://picsum.photos/id/1025/600/400" alt="Mascota">
+            <img src="https://picsum.photos/id/1062/600/400" alt="Animal">
+            <img src="https://picsum.photos/id/200/600/400" alt="Perro">
+            <img src="https://picsum.photos/id/201/600/400" alt="Cachorro">
+          </div>
+        </div>
+
+        <div class="tab-panel" id="gpanel3">
+          <div class="gallery-grid">
+            <img src="https://picsum.photos/id/1005/600/400" alt="Familia">
+            <img src="https://picsum.photos/id/1012/600/400" alt="Padres">
+            <img src="https://picsum.photos/id/1020/600/400" alt="Niños">
+            <img src="https://picsum.photos/id/1040/600/400" alt="Hermanos">
+            <img src="https://picsum.photos/id/1011/600/400" alt="Retrato">
+            <img src="https://picsum.photos/id/1014/600/400" alt="Grupo">
+          </div>
+        </div>
+
+        <div class="tab-panel" id="gpanel4">
+          <div class="gallery-grid">
+            <img src="https://picsum.photos/id/1036/600/400" alt="Atardecer 1">
+            <img src="https://picsum.photos/id/1039/600/400" alt="Atardecer 2">
+            <img src="https://picsum.photos/id/1043/600/400" alt="Atardecer 3">
+            <img src="https://picsum.photos/id/1050/600/400" alt="Atardecer 4">
+            <img src="https://picsum.photos/id/1055/600/400" alt="Horizonte">
+            <img src="https://picsum.photos/id/1057/600/400" alt="Cielo naranja">
+          </div>
+        </div>
+
+        <div class="tab-panel" id="gpanel5">
+          <div class="gallery-grid">
+            <img src="https://picsum.photos/id/10/600/400" alt="Bosque">
+            <img src="https://picsum.photos/id/15/600/400" alt="Montaña">
+            <img src="https://picsum.photos/id/28/600/400" alt="Lago">
+            <img src="https://picsum.photos/id/29/600/400" alt="Cascada">
+            <img src="https://picsum.photos/id/37/600/400" alt="Valle">
+            <img src="https://picsum.photos/id/39/600/400" alt="Campo">
+            <img src="https://picsum.photos/id/42/600/400" alt="Río">
+            <img src="https://picsum.photos/id/47/600/400" alt="Naturaleza">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  
+
+  <!-- BOTÓN VOLVER -->
+  <a href="servicio.html" class="btn-back">← Volver a Servicios</a>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="contacto-section">
+    <div class="contenido-inner">
+      <h2>Contáctanos</h2>
+      <p style="color: #cbd5e1; margin-bottom: 30px;">¿Tienes dudas o sugerencias? Escríbenos.</p>
+      
+      <form class="contact-form" action="" method="post">
+        <div class="form-group">
+          <input type="text" placeholder="Tu Nombre" required>
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="Tus Apellidos" required>
+        </div>
+        <div class="form-group">
+          <select name="ocupacion" required>
+            <option value="" disabled selected>Selecciona tu ocupación</option>
+            <option value="estudiante">Estudiante</option>
+            <option value="hogar">Del Hogar</option>
+            <option value="inversionista">Inversionista</option>
+            <option value="fotografo">Fotógrafo</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Tu Correo Electrónico" required>
+        </div>
+        <button type="submit" class="btn-submit">Enviar Mensaje</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-logo">Galería<span>Secreta</span></div>
+      <p>Compartiendo los mejores momentos del mundo, una foto a la vez.</p>
+      
+      <div class="social-links">
+        <a href="#" target="_blank"> Facebook</a>
+        <a href="#" target="_blank"> Instagram</a>
+        <a href="#" target="_blank"> Twitter</a>
+        <a href="#" target="_blank"> Email</a>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2024 Galería Secreta. Todos los derechos reservados.</p>
+      <p>Desarrollado por <strong>[Tu Nombre Aquí]</strong></p>
+    </div>
+  </footer>
+
+</body>
+</html>
