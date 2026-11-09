@@ -1,0 +1,566 @@
+/* ============================================
+   SERVICIOS.CSS - Estilos completos
+   ============================================ */
+
+/* ===== RESET BÁSICO ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Helvetica, sans-serif;
+  color: #333;
+  background: #f8fafc;
+  margin: 0;
+}
+
+/* ===== NAVBAR (igual que tu index) ===== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  background: rgba(20, 22, 26, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nav__toggle {
+  display: none;
+  background-color: #e4e6ea;
+}
+
+.navbar__logo {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #9a9fa8;
+  text-decoration: none;
+}
+
+.navbar__logo span {
+  color: #f2f0ea;
+}
+
+.nav__links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__links a {
+  color: #9a9fa8;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav__links a:hover,
+.nav__links a.active {
+  color: #f2f0ea;
+  transform: scale(1.1);
+}
+
+/* ===== HERO CON VIDEO (igual que tu index) ===== */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero__bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 23, 42, 0.5);
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  max-width: 800px;
+}
+
+.hero-subtitle {
+  display: inline-block;
+  padding: 6px 16px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  color: #fff;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.btn-hero {
+  display: inline-block;
+  padding: 14px 32px;
+  background-color: #fff;
+  color: #0f172a;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-hero:hover {
+  background-color: #cecece;
+  color: #000;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4);
+}
+
+/* ===== SISTEMA DE PESTAÑAS (estilo claro) ===== */
+.servicios-tabs {
+  padding: 80px 20px;
+  background: #f8fafc;
+}
+
+.tabs-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+.tabs-header h2 {
+  font-size: 2.5rem;
+  color: #0f172a;
+  margin-bottom: 15px;
+}
+
+.tabs-header p {
+  color: #64748b;
+  font-size: 1.1rem;
+}
+
+.tabs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Ocultar los radio buttons */
+.tabs-container input[type="radio"] {
+  display: none;
+}
+
+/* Navegación de pestañas */
+.tabs-nav {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 40px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.tab-label {
+  flex: 1;
+  min-width: 150px;
+  padding: 20px 25px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.tab-label:hover {
+  border-color: #144fa1;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(20, 79, 161, 0.15);
+}
+
+.tab-icon {
+  font-size: 1.5rem;
+}
+
+.tab-text {
+  color: #475569;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* Panel de contenido */
+.tab-panel {
+  display: none;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 50px 40px;
+  animation: fadeIn 0.5s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mostrar panel activo según el radio seleccionado */
+#tab1:checked ~ .tabs-content #panel1,
+#tab2:checked ~ .tabs-content #panel2,
+#tab3:checked ~ .tabs-content #panel3,
+#tab4:checked ~ .tabs-content #panel4,
+#tab5:checked ~ .tabs-content #panel5 {
+  display: block;
+}
+
+/* Estilo del label activo */
+#tab1:checked ~ .tabs-nav label[for="tab1"],
+#tab2:checked ~ .tabs-nav label[for="tab2"],
+#tab3:checked ~ .tabs-nav label[for="tab3"],
+#tab4:checked ~ .tabs-nav label[for="tab4"],
+#tab5:checked ~ .tabs-nav label[for="tab5"] {
+  background: linear-gradient(135deg, #144fa1, #266fdc);
+  border-color: #144fa1;
+  box-shadow: 0 8px 25px rgba(20, 79, 161, 0.3);
+}
+
+#tab1:checked ~ .tabs-nav label[for="tab1"] .tab-text,
+#tab2:checked ~ .tabs-nav label[for="tab2"] .tab-text,
+#tab3:checked ~ .tabs-nav label[for="tab3"] .tab-text,
+#tab4:checked ~ .tabs-nav label[for="tab4"] .tab-text,
+#tab5:checked ~ .tabs-nav label[for="tab5"] .tab-text {
+  color: #fff;
+}
+
+#tab1:checked ~ .tabs-nav label[for="tab1"] .tab-icon,
+#tab2:checked ~ .tabs-nav label[for="tab2"] .tab-icon,
+#tab3:checked ~ .tabs-nav label[for="tab3"] .tab-icon,
+#tab4:checked ~ .tabs-nav label[for="tab4"] .tab-icon,
+#tab5:checked ~ .tabs-nav label[for="tab5"] .tab-icon {
+  filter: brightness(0) invert(1);
+}
+
+/* Contenido del panel */
+.panel-header {
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.panel-header h3 {
+  font-size: 2rem;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.panel-header p {
+  color: #64748b;
+  font-size: 1.1rem;
+}
+
+.panel-body {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+.panel-features {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.feature-item {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background: #f8fafc;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.feature-item:hover {
+  background: #fff;
+  border-color: #144fa1;
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(20, 79, 161, 0.1);
+}
+
+.feature-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #144fa1, #266fdc);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.feature-text h4 {
+  color: #0f172a;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.feature-text p {
+  color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.panel-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stat {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.stat:hover {
+  border-color: #144fa1;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(20, 79, 161, 0.1);
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #144fa1;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+/* ===== BOTÓN DE ACCIÓN EN PANELES ===== */
+.panel-action {
+  margin-top: 40px;
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.btn-accion {
+  display: inline-block;
+  padding: 16px 40px;
+  background: linear-gradient(135deg, #144fa1, #266fdc);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(20, 79, 161, 0.3);
+  letter-spacing: 0.5px;
+}
+
+.btn-accion:hover {
+  background: linear-gradient(135deg, #0f3d82, #1e5bb8);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(20, 79, 161, 0.4);
+}
+
+.btn-accion:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 720px) {
+  .nav__links {
+    display: none;
+  }
+  .nav__toggle {
+    display: block;
+    background-color: #fff;
+  }
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .tabs-nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  .tab-label {
+    min-width: 120px;
+    padding: 15px 20px;
+  }
+  .tab-text {
+    font-size: 0.85rem;
+  }
+  .panel-body {
+    grid-template-columns: 1fr;
+  }
+  .tab-panel {
+    padding: 30px 20px;
+  }
+  .panel-header h3 {
+    font-size: 1.5rem;
+  }
+  .tabs-header h2 {
+    font-size: 2rem;
+  }
+  .btn-accion {
+    padding: 14px 30px;
+    font-size: 0.95rem;
+  }
+
+}
+/* ===== PESTAÑAS DE LA GALERÍA (INDEX) ===== */
+.tabs-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.tabs-container input[type="radio"] {
+  display: none;
+}
+
+.tabs-nav {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tab-label {
+  padding: 12px 24px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  color: #64748b;
+}
+
+.tab-label:hover {
+  border-color: #144fa1;
+  color: #144fa1;
+  transform: translateY(-2px);
+}
+
+.tab-panel {
+  display: none;
+  animation: fadeIn 0.5s ease;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.gallery-grid img:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Lógica para mostrar el panel activo */
+#gtab1:checked ~ .tabs-content #gpanel1,
+#gtab2:checked ~ .tabs-content #gpanel2,
+#gtab3:checked ~ .tabs-content #gpanel3,
+#gtab4:checked ~ .tabs-content #gpanel4,
+#gtab5:checked ~ .tabs-content #gpanel5 {
+  display: block;
+}
+
+/* Estilo de la pestaña activa */
+#gtab1:checked ~ .tabs-nav label[for="gtab1"],
+#gtab2:checked ~ .tabs-nav label[for="gtab2"],
+#gtab3:checked ~ .tabs-nav label[for="gtab3"],
+#gtab4:checked ~ .tabs-nav label[for="gtab4"],
+#gtab5:checked ~ .tabs-nav label[for="gtab5"] {
+  background: #144fa1;
+  color: #fff;
+  border-color: #144fa1;
+  box-shadow: 0 4px 15px rgba(20, 79, 161, 0.3);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

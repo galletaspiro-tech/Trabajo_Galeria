@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tu Galeria Secreta</title>
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/styles.css">
+    
     <style>
         /* Tus estilos aquí si los necesitas */
     </style>
@@ -15,9 +16,9 @@
     <a class="navbar__logo" href="">Logo</a>
     <ul class="nav__links">
       <li><a href="index.html">Inicio</a></li>
-      <li><a href="">Servicios</a></li>
-      <li><a href="">Nosotros</a></li>
-      <li><a href="">Contacto</a></li>
+      <li><a href="servicio.html">Servicios</a></li>
+      <li><a href="">Iniciar Seción</a></li>
+      <li><a href="perfil.html">Registrar</a></li>
     </ul>
     <a href="" class="nav__toggle">
       <img src="images/list.svg" width="40" height="40">
@@ -31,11 +32,14 @@
     <div class="hero-content">
       <h1>Galeria </h1>
       <p>Tus mejores recueros</p>
-      <a href="#" class="btn-hero">Más Información</a>
+      <a href="#favoritas" class="btn-hero">Más Información</a>
     </div>
   </header>
 
-  <section id="section1" class="contenido">
+  
+      
+
+  <section id="favoritas" class="contenido">
     <div class="contenido-inner">
       <h2>Favoritas</h2>
     </div>
@@ -44,7 +48,7 @@
       <div class="card">
         <div class="card__inner">
           <div class="card__front">
-            <div class="card__icon">&#10026;</div>
+            <div class="card__icon">🐾</div>
             <h3 class="card__title">Mascotas </h3>
           </div>
           <div class="card__back">
@@ -56,11 +60,11 @@
       <div class="card">
         <div class="card__inner">
           <div class="card__front">
-            <div class="card__icon">&#10026;</div>
+            <div class="card__icon">✈️</div>
             <h3 class="card__title">Viajes</h3>
           </div>
           <div class="card__back">
-            <p class="card__text">Muestrale al mundo tus mejores fotos </p>
+            <p class="card__text">Muestrale al mundo tus fotos </p>
           </div>
         </div>
       </div>
@@ -68,11 +72,11 @@
       <div class="card">
         <div class="card__inner">
           <div class="card__front">
-            <div class="card__icon">&#10026;</div>
+            <div class="card__icon">🌿</div>
             <h3 class="card__title">Naturaleza</h3>
           </div>
           <div class="card__back">
-            <p class="card__text">La mores fotos de naturaleza </p>
+            <p class="card__text">Las mejores fotos de naturaleza </p>
           </div>
         </div>
       </div>
@@ -80,94 +84,226 @@
       <div class="card">
         <div class="card__inner">
           <div class="card__front">
-            <div class="card__icon">&#10026;</div>
+            <div class="card__icon">🏔️</div>
             <h3 class="card__title">Paisaje</h3>
           </div>
           <div class="card__back">
-            <p class="card__text">Framework de JavaScript orientado a la UI</p>
+            <p class="card__text">Vistas increíbles del mundo</p>
           </div>
         </div>
 
       </div>
     </section>
-    <section class="galeria-seccion">
-        <h2>Galería</h2>
-        <p>Todas tus fotos </p>
+      <section class="galeria-seccion" id="galeria">
+    <h2>Galería</h2>
+    <p>Explora nuestras mejores fotografías por categoría</p>
 
-        <div class="galeria">
-          
-            <div class="img-grande">
-                <img src="images/g6.jpeg" alt="">
-                 <img src="images/g5.jpeg" alt="">
-                  <img src="images/1.jpeg" alt="">
-            </div>
+    <div class="tabs-container">
+      <!-- Radio buttons ocultos para controlar las pestañas -->
+      <input type="radio" name="galeria-tabs" id="gtab1" checked>
+      <input type="radio" name="galeria-tabs" id="gtab2">
+      <input type="radio" name="galeria-tabs" id="gtab3">
+      <input type="radio" name="galeria-tabs" id="gtab4">
+      <input type="radio" name="galeria-tabs" id="gtab5">
 
-            <div class="imgs-pequenas">
-                <img src="images/g1.jpeg" alt="">
-                <img src="images/g2.jpeg" alt="">
-                <img src="images/g3.jpeg" alt="">
-                <img src="images/g4.jpeg" alt="">
-            </div>
+      <!-- Navegación de pestañas -->
+      <div class="tabs-nav">
+        <label for="gtab1" class="tab-label">
+          <span class="tab-icon"></span>
+          <span class="tab-text">Todas</span>
+        </label>
+        <label for="gtab2" class="tab-label">
+          <span class="tab-icon"></span>
+          <span class="tab-text">Mascotas</span>
+        </label>
+        <label for="gtab3" class="tab-label">
+          <span class="tab-icon"></span>
+          <span class="tab-text">Familia</span>
+        </label>
+        <label for="gtab4" class="tab-label">
+          <span class="tab-icon"></span>
+          <span class="tab-text">Atardecer</span>
+        </label>
+        <label for="gtab5" class="tab-label">
+          <span class="tab-icon"></span>
+          <span class="tab-text">Paisaje</span>
+        </label>
+      </div>
+
+      <!-- Contenido de las pestañas -->
+      <div class="tabs-content">
+        
+        <!-- Panel 1: Todas -->
+        <div class="tab-panel gallery-panel" id="gpanel1">
+          <div class="gallery-grid">
+            <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=400" alt="Mascota">
+            <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400" alt="Familia">
+            <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=400" alt="Atardecer">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400" alt="Paisaje">
+            <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400" alt="Gato">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=400" alt="Lago">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwjA7C7-Zl2JLq200COAB7SUpO33bs4yfaYwrVM7OFuw&s=10" alt="">
+            <img src="https://gaceta.cch.unam.mx/sites/default/files/styles/imagen_articulos_1920x1080/public/2023-09/pag_62.jpg?h=208bb47f&itok=Nj1QrlLd" alt="">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9xiv9LhatUYA41Ci2K6bCzuScwGbYNsJNu1VXefDYWmIUU9u48GgK-b0&s=10" alt="">
+            <img src="https://static.foto321.com/2020/11/Imagen-Cabana-en-invierno.jpg" alt="">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB2yY-hZa7vBtUEvc1m87dJ6O3jjgjd9QEAhTEHviDCdFgSAnerljmx8Y&s=10" alt="">
+            <img src="https://media.admagazine.com/photos/618a679faf428eae6e0b5b56/16:9/w_4032,h_2268,c_limit/64214.jpg" alt="">
+        <!-- Panel 2: Mascotas -->
+        <div class="tab-panel gallery-panel" id="gpanel2">
+          <div class="gallery-grid">
+            <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=400" alt="Perro feliz">
+            <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400" alt="Gato curioso">
+            <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=400" alt="Cachorro">
+            <img src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?w=400" alt="Perro jugando">
+
+            <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400" alt="gato">
+            <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=400" alt="Cachorro">
+            <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=400" alt="Gato lindo">
+            <img src="https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=400" alt="Perro en parque">
+            
+
+            
+          </div>
         </div>
 
-        <hr>
-    </section>
-       
+        <!-- Panel 3: Familia -->
+        <div class="tab-panel gallery-panel" id="gpanel3">
+          <div class="gallery-grid">
+            
+            <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400" alt="Familia abrazada">
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=400" alt="Padres con bebé">
+            <img src="https://concepto.de/wp-content/uploads/2015/08/familia-extensa-e1591818033557.jpg" alt="famila">
+            <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=400" alt="Abrazo padre hijo">
+            <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=400" alt="Familia sonriente">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxHBCUDh19TvJuiVoYyWDvPar2VCfvQ2WyYgZQLx9Hg4jeRScZ7-7iYoWY&s=10" alt="">
+            <img src="https://pymstatic.com/1599/conversions/tipos-de-familia-social.jpg" alt="">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwjA7C7-Zl2JLq200COAB7SUpO33bs4yfaYwrVM7OFuw&s=10 " alt="">
+            
+            
+          </div>
+        </div>
+
+        <!-- Panel 4: Atardecer -->
+        <div class="tab-panel gallery-panel" id="gpanel4">
+          <div class="gallery-grid">
+            <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=400" alt="Atardecer en el campo">
+            <img src="https://images.unsplash.com/photo-1495616811223-4d98c6e9c869?w=400" alt="Atardecer en la playa">
+
+            <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=400" alt="Sol bajando">
+          </div>
+        </div>
+
+        <!-- Panel 5: Paisaje -->
+        <div class="tab-panel gallery-panel" id="gpanel5">
+          <div class="gallery-grid">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400" alt="Montañas">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=400" alt="Lago sereno">
+            <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=400" alt="Bosque verde">
+            <img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=400" alt="Cascada">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+   
+ 
 
     
 
   <section class="contenido_">
     <div class="contenido-inner_">
-      <h2>Conoce al equipo de trabajo</h2>
+    
+      <h2>Fotos fovoritas</h2>
     </div>
 
     <div class="equipo">
       <article class="miembro">
-        <img src="images/1.jpeg" alt="persona 1">
+        <img src="https://png.pngtree.com/png-clipart/20241126/original/pngtree-cute-pet-cats-and-dogs-png-image_17325273.png" alt="persona 1">
         <div class="datos">
-          <h3>persona 1</h3>
-          <p class="cargo">ceo1</p>
+          <h3>Tus mascotas</h3>
+          <p class="cargo"></p>
         </div>
       </article>
 
       <article class="miembro">
-        <img src="images/2.jpeg" alt="persona 2">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD7Kem5rLdTnFus0qI4VT3LHy-AqEJRte3Jp0GY4MD4A&s=10" alt="persona 2">
         <div class="datos">
-          <h3>persona 2</h3>
-          <p class="cargo">ceo2</p>
+          <h3>Posters</h3>
+          <p class="cargo"></p>
         </div>
       </article>
 
       <article class="miembro">
-        <img src="images/3.jpeg" alt="persona 3">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzD-9Q_TukWTYmtBClsUbDFkV28oTrtKAgAJ_5pLmFMfbItL8nS14W6-j6&s=10" alt="persona 3">
         <div class="datos">
-          <h3>persona 3</h3>
-          <p class="cargo">ceo3</p>
+          <h3>Paisajes</h3>
+          <p class="cargo"></p>
         </div>
       </article>
+      
+    </div>
+    <section class="contenido" style="background: #fff; padding: 60px 20px;">
+    <div class="contenido-inner">
+      <h2>¿Te gustó lo que viste?</h2>
+      <p style="color: #64748b; margin-bottom: 30px;">Guarda tus fotos favoritas en tu colección personal</p>
+      <a href="perfil.html" class="btn-hero" style="background: #144fa1; color: white; font-size: 1.1rem;"> Ver mis Favoritas
+      </a>
     </div>
   </section>
-  <section id="section1" class="contenido">
-    <form action="" method="post">
-      <p> nombre <input type="text" placeholder="Captura Nombre"></p>
-      <p>Apellidos <input type="text" placeholder="Captura Apellidos"></p>
-      <p>ocupacion <select name="ocupacion" id=""placeholder="Captura Apellidos"s>
-        <option value=""> seleciona uno </option>
-        <option value="estudiante"> estudiante </option>
-        <option value=""> alHogar </option>
-        <option value=""> inversionista</option>
-        
-        
-
-        
-        
-
-      </select> </p>
-      <p>coreo electronico <input type="email" name="" id="" placeholder="ingresa tu correo"></p>
-
-    </form>
   </section>
-   
+  <hr>
+ 
+
+  <!-- SECCIÓN DE CONTACTO -->
+  <section id="contacto" class="contacto-section">
+    <div class="contenido-inner">
+      <h2>Contáctanos</h2>
+      <p style="color: #cbd5e1; margin-bottom: 30px;">¿Tienes dudas o sugerencias? Escríbenos.</p>
+      
+      <form class="contact-form" action="" method="post">
+        <div class="form-group">
+          <input type="text" placeholder="Tu Nombre" required>
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="Tus Apellidos" required>
+        </div>
+        <div class="form-group">
+          <select name="ocupacion" required>
+            <option value="" disabled selected>Selecciona tu ocupación</option>
+            <option value="estudiante">Estudiante</option>
+            <option value="hogar">Del Hogar</option>
+            <option value="inversionista">Inversionista</option>
+            <option value="fotografo">Fotógrafo</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Tu Correo Electrónico" required>
+        </div>
+        <button type="submit" class="btn-submit">Enviar Mensaje</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER (Pie de página) -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-logo">Galería<span>Secreta</span></div>
+      <p>Compartiendo los mejores momentos del mundo, una foto a la vez.</p>
+      
+      <div class="social-links">
+        <a href="#" target="_blank"> Facebook</a>
+        <a href="#" target="_blank"> Instagram</a>
+        <a href="#" target="_blank"> Twitter</a>
+        <a href="#" target="_blank"> Email</a>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2024 Galería Secreta. Todos los derechos reservados.</p>
+      <p>Desarrollado por <strong></strong></p>
+    </div>
 
 </body>
 </html>
